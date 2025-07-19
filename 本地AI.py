@@ -7,13 +7,13 @@ import ubinascii
 # 连接WiFi
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
-sta_if.connect("LITLIE", "123456789")
+sta_if.connect("Your_Wifi_Name", "Your_Wifi_Password")
 while not sta_if.isconnected():
     pass
 print("Connected! IP:", sta_if.ifconfig()[0])
 
 # DeepSeek API配置
-API_KEY = "sk-482aae64ee614d72a1b585650845d328"  # 请使用有效密钥
+API_KEY = "sk-482*****************28"  # 请使用有效密钥
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 def ask_llm(prompt):
