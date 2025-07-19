@@ -13,7 +13,7 @@ while not sta_if.isconnected():
 print("Connected! IP:", sta_if.ifconfig()[0])
 
 # DeepSeek API配置
-API_KEY = "sk-482*****************28"  # 请使用有效密钥
+API_KEY = "sk-4******************28"  # 请使用有效密钥
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 def ask_llm(prompt):
