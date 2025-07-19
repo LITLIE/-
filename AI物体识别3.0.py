@@ -100,8 +100,8 @@ def connect_wifi(ssid, password):
     return wlan.ifconfig()[0]
 
 # Moonshot API配置
-MOONSHOT_API_KEY = "sk-1K7AQ4A4tLBT4zk4Hl2u54xhaf678Gjsjl1sq1DNpZnabssY"  # 替换为你的Moonshot API密钥
-MOONSHOT_API_URL = "https://api.moonshot.cn/v1/chat/completions"
+MOONSHOT_API_KEY = "sk-1K7*******************ssY"  # 替换为你的Moonshot API密钥，也可利用其他模型
+MOONSHOT_API_URL = "https://api.moonshot.cn/v1/chat/completions" # 替换为你所需要使用的模型
 
 def analyze_image_with_ai(image_data, prompt="请描述这张图片的内容"):
     """
@@ -584,7 +584,7 @@ def main():
     max_wifi_retries = 3
     ip = None
     for i in range(max_wifi_retries):
-        ip = connect_wifi("LITLIE", "123456789")  # 使用你的WiFi凭证
+        ip = connect_wifi("WiFi_Name", "WiFi_Password")  # 使用你的WiFi凭证
         if ip:
             break
         print(f"WiFi connection failed, retry {i+1}/{max_wifi_retries}")
