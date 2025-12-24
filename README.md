@@ -1,1 +1,5 @@
-这两个代码基于ESP32-S3开发板
+以上代码为基于Samgeo与EO-learn库所完成
+主要功能为利用高光谱数据
+对地物进行识别与分割（Plus3_KMeans.py）
+对识别后的植被进行火灾分线的预测（ENVI_FireRisk_OK.py）
+结合DSM数据，进行更加精准的预测
