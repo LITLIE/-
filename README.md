@@ -2,4 +2,4 @@
 主要功能为利用高光谱数据
 对地物进行识别与分割（Plus3_KMeans.py）
 对识别后的植被进行火灾分线的预测（ENVI_FireRisk_OK.py）
-结合DSM数据，进行更加精准的预测
+结合DSM数据，进行更加精准的预测（fire_risk_hsi_with_optional_dsm_OK.py）
