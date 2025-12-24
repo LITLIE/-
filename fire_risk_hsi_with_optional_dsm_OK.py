@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
-"""
-fire_risk_hsi_with_optional_dsm.py
 
-完整可运行的火险评估管线（高光谱 + 可选 DSM 整合）
-- 基于用户原始脚本，整合：SAM 分割 -> 段级特征 -> 弱监督 RF -> 像素 CNN -> 段像素融合 -> 风险评估
-- 可选加载 DSM（如 ZhuHai AW3D30*.TIF）用于提升建筑/树木区分精度
-
-使用方法示例：
-    python fire_risk_hsi_with_optional_dsm.py ^
-  --hsi "C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\高光谱反射率数据\raw_10096_rd_rf_or2.tif" ^
-  --outdir "C:\Users\wzc\Desktop\output" ^
-  --use_dsm ^
-  --dsm_dir "C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\DSM"
-
-依赖（建议虚拟环境）:
-    pip install rasterio numpy matplotlib spectral scikit-learn torch torchvision eolearn samgeo scipy joblib
-
-注意：SamGeo 需要能访问 ViT 模型并可能需要 GPU。若没有 GPU 程序会回退到 CPU。
-
-"""
+#
+# 完整可运行的火险评估管线（高光谱 + 可选 DSM 整合）
+# - 基于用户原始脚本，整合：SAM 分割 -> 段级特征 -> 弱监督 RF -> 像素 CNN -> 段像素融合 -> 风险评估
+# - 可选加载 DSM（如 ZhuHai AW3D30*.TIF）用于提升建筑/树木区分精度
+#
+# 使用方法示例：
+#     python fire_risk_hsi_with_optional_dsm_OK.py ^
+#   --hsi "C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\高光谱反射率数据\raw_10096_rd_rf_or2.tif" ^
+#   --outdir "C:\Users\wzc\Desktop\output" ^
+#   --use_dsm ^
+#   --dsm_dir "C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\DSM"
+#
+# 依赖（建议虚拟环境）:
+#     pip install rasterio numpy matplotlib spectral scikit-learn torch torchvision eolearn samgeo scipy joblib
+#
+# 注意：SamGeo 需要能访问 ViT 模型并可能需要 GPU。若没有 GPU 程序会回退到 CPU。
 
 import os
 import argparse
