@@ -12,7 +12,7 @@ from sklearn.decomposition import PCA
 # 1. 全局配置 (请在此处检查路径)
 # --------------------------------------------------------------------------
 CONFIG = {
-    "IMAGE_PATH": r"C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\高光谱反射率数据\raw_10096_rd_rf_or2.tif",
+    "IMAGE_PATH": r"C:\Users\wzc\Desktop\20220228 北师大珠海校区(2)\高光谱反射率数据\raw_10096_rd_rf_or2.tif",# 指向原有的高光谱数据文件
     "ENVI_NDVI_PATH": r"C:\Users\wzc\Desktop\测试2",  # 指向ENVI导出的数据文件
     "OUT_DIR": "Fire_Risk_Final_Project",
     "SWIR_BAND": 183,  # 用于建筑物识别的短波红外波段
@@ -223,4 +223,5 @@ def run_all():
 
 
 if __name__ == "__main__":
+
     run_all()
