@@ -1,0 +1,22 @@
+# 基础矩阵
+numpy==1.23.5
+opencv-python==4.9.0.80
+Pillow
+
+# 核心算法 (核心兼容组合)
+mediapipe==0.10.11
+tensorflow==2.12.0
+
+# 界面与显示
+PyQt5==5.15.10
+pyvirtualcam
+
+# AI 与 语音
+openai>=1.0.0
+dashscope
+sounddevice
+SpeechRecognition
+pyttsx3
+
+# 环境适配
+protobuf==3.20.3
